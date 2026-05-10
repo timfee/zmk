@@ -61,12 +61,12 @@
             bindings = <&kp>, <&kp>;
         };
 
-        /* GU_BSP: shorter tapping-term (QMK had 100 ms). */
+        /* GU_BSP: matches GU_SPC tapping-term for symmetry. */
         lhm_bsp: left_hand_mt_bsp {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <90>;
             require-prior-idle-ms = <150>;
             hold-trigger-key-positions = <RH_KEYS>;
@@ -141,6 +141,18 @@
         combo_rbrace { timeout-ms = <50>; key-positions = <30 31>; bindings = <&kp RBRC>; layers = <BASE>; };
         combo_pipe   { timeout-ms = <50>; key-positions = <25 26>; bindings = <&kp PIPE>; layers = <BASE>; };
         combo_bslh   { timeout-ms = <50>; key-positions = <34 35>; bindings = <&kp BSLH>; layers = <BASE>; };
+
+        /* Vertical left-column combos: top+mid = shifted digit, mid+bot = digit. */
+        combo_excl   { timeout-ms = <50>; key-positions = < 1 13>; bindings = <&kp EXCL>;  layers = <BASE>; };
+        combo_at     { timeout-ms = <50>; key-positions = < 2 14>; bindings = <&kp AT>;    layers = <BASE>; };
+        combo_hash   { timeout-ms = <50>; key-positions = < 3 15>; bindings = <&kp HASH>;  layers = <BASE>; };
+        combo_dllr   { timeout-ms = <50>; key-positions = < 4 16>; bindings = <&kp DLLR>;  layers = <BASE>; };
+        combo_prcnt  { timeout-ms = <50>; key-positions = < 5 17>; bindings = <&kp PRCNT>; layers = <BASE>; };
+        combo_n1     { timeout-ms = <50>; key-positions = <13 25>; bindings = <&kp N1>;    layers = <BASE>; };
+        combo_n2     { timeout-ms = <50>; key-positions = <14 26>; bindings = <&kp N2>;    layers = <BASE>; };
+        combo_n3     { timeout-ms = <50>; key-positions = <15 27>; bindings = <&kp N3>;    layers = <BASE>; };
+        combo_n4     { timeout-ms = <50>; key-positions = <16 28>; bindings = <&kp N4>;    layers = <BASE>; };
+        combo_n5     { timeout-ms = <50>; key-positions = <17 29>; bindings = <&kp N5>;    layers = <BASE>; };
     };
 
     keymap {
