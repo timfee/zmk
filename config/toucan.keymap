@@ -61,12 +61,12 @@
             bindings = <&kp>, <&kp>;
         };
 
-        /* GU_BSP: shorter tapping-term (QMK had 100 ms). */
+        /* GU_BSP: matches GU_SPC tapping-term for symmetry. */
         lhm_bsp: left_hand_mt_bsp {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <90>;
             require-prior-idle-ms = <150>;
             hold-trigger-key-positions = <RH_KEYS>;
@@ -141,6 +141,28 @@
         combo_rbrace { timeout-ms = <50>; key-positions = <30 31>; bindings = <&kp RBRC>; layers = <BASE>; };
         combo_pipe   { timeout-ms = <50>; key-positions = <25 26>; bindings = <&kp PIPE>; layers = <BASE>; };
         combo_bslh   { timeout-ms = <50>; key-positions = <34 35>; bindings = <&kp BSLH>; layers = <BASE>; };
+
+        /* Vertical column combos: top+mid = shifted digit, mid+bot = digit. */
+        combo_excl   { timeout-ms = <50>; key-positions = < 1 13>; bindings = <&kp EXCL>;  layers = <BASE>; };
+        combo_at     { timeout-ms = <50>; key-positions = < 2 14>; bindings = <&kp AT>;    layers = <BASE>; };
+        combo_hash   { timeout-ms = <50>; key-positions = < 3 15>; bindings = <&kp HASH>;  layers = <BASE>; };
+        combo_dllr   { timeout-ms = <50>; key-positions = < 4 16>; bindings = <&kp DLLR>;  layers = <BASE>; };
+        combo_prcnt  { timeout-ms = <50>; key-positions = < 5 17>; bindings = <&kp PRCNT>; layers = <BASE>; };
+        combo_n1     { timeout-ms = <50>; key-positions = <13 25>; bindings = <&kp N1>;    layers = <BASE>; };
+        combo_n2     { timeout-ms = <50>; key-positions = <14 26>; bindings = <&kp N2>;    layers = <BASE>; };
+        combo_n3     { timeout-ms = <50>; key-positions = <15 27>; bindings = <&kp N3>;    layers = <BASE>; };
+        combo_n4     { timeout-ms = <50>; key-positions = <16 28>; bindings = <&kp N4>;    layers = <BASE>; };
+        combo_n5     { timeout-ms = <50>; key-positions = <17 29>; bindings = <&kp N5>;    layers = <BASE>; };
+        combo_caret  { timeout-ms = <50>; key-positions = < 6 18>; bindings = <&kp CARET>; layers = <BASE>; };
+        combo_amps   { timeout-ms = <50>; key-positions = < 7 19>; bindings = <&kp AMPS>;  layers = <BASE>; };
+        combo_astrk  { timeout-ms = <50>; key-positions = < 8 20>; bindings = <&kp ASTRK>; layers = <BASE>; };
+        combo_lparv  { timeout-ms = <50>; key-positions = < 9 21>; bindings = <&kp LPAR>;  layers = <BASE>; };
+        combo_rparv  { timeout-ms = <50>; key-positions = <10 22>; bindings = <&kp RPAR>;  layers = <BASE>; };
+        combo_n6     { timeout-ms = <50>; key-positions = <18 30>; bindings = <&kp N6>;    layers = <BASE>; };
+        combo_n7     { timeout-ms = <50>; key-positions = <19 31>; bindings = <&kp N7>;    layers = <BASE>; };
+        combo_n8     { timeout-ms = <50>; key-positions = <20 32>; bindings = <&kp N8>;    layers = <BASE>; };
+        combo_n9     { timeout-ms = <50>; key-positions = <21 33>; bindings = <&kp N9>;    layers = <BASE>; };
+        combo_n0     { timeout-ms = <50>; key-positions = <22 34>; bindings = <&kp N0>;    layers = <BASE>; };
     };
 
     keymap {
